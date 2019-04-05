@@ -1,0 +1,23 @@
+{
+  "name": "myclidemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "mycli": "./bin/myclidemo.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chousann/myclidemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chousann/myclidemo/issues"
+  },
+  "homepage": "https://github.com/chousann/myclidemo#readme"
+}
