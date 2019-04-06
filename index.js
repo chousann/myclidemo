@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 // 参考：
 // https://www.cnblogs.com/wmhuang/p/7052587.html
 // http://www.sohu.com/a/275486462_495695
