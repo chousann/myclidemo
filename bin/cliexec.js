@@ -3,12 +3,14 @@
 // http://www.sohu.com/a/275486462_495695
 // https://www.jianshu.com/p/095c968d406f
 
-function cli() {
+var Clitasks = require('./clitask');
+function Cli() {
     this._clitask = {};
     this.version = '1.0.0';
+    Clitasks(this);
 }
 
-cli.prototype.exec = function (argv){
+Cli.prototype.exec = function (argv){
     switch (argv[2]) {
         case '-v':
         case '-version':
@@ -38,12 +40,16 @@ cli.prototype.exec = function (argv){
     }
 };
 
-cli.prototype.clitask = function (name,fn){
+Cli.prototype.clitask = function (name,fn){
     this._clitask['-' + name] = fn;
 };
 
-cli.prototype.get = function (name){
+Cli.prototype.get = function (name){
     return this._clitask[name];
 };
 
-module.exports = cli;
+// Let people use this class from our instance
+Cli.prototype.Cli = Cli;
+var inst = new Cli();
+
+module.exports = inst;
